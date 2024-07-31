@@ -6,7 +6,12 @@ const path = require('path');
 const fs = require('fs');
 const mongoose = require('mongoose');
 
-const PORT = process.env.PORT || 5000 ;
+
+require('dotenv').config();  // Load environment variables from .env file
+
+const PORT = process.env.PORT || 5000;
+const DATABASE = process.env.DATABASE;
+
 require("./db/config");
 
 const User = require("./db/user");
